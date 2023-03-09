@@ -71,6 +71,7 @@
         private static void CalculateTotal(List<CartItem> cart)
         {
             var totalPrice = 0.0;
+            Console.WriteLine("Item" + " " + "Quantity" + " " + "Subtotal" + " " + "Total");
             foreach (var cartItem in cart)
             {
                 double itemCalculatedPrice;
@@ -83,7 +84,6 @@
                     itemCalculatedPrice = cartItem.Quantity * cartItem.Item.Price;
                 }
                 totalPrice += itemCalculatedPrice;
-                Console.WriteLine("Item" + " " + "Quantity" + " " + "Subtotal" + " " + "Total");
                 Console.WriteLine(cartItem.Item.Name + " " + cartItem.Quantity + " " + itemCalculatedPrice + " " + totalPrice);
                 itemCalculatedPrice = 0.0;
             }
